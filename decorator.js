@@ -8,7 +8,7 @@ Decorator.prototype.addCan = function (can) {
 
 Decorator.prototype.totalVolume = function () {
   let totalVolume = 0;
-  for (can of this.paintStock){
+  for (const can of this.paintStock){
     totalVolume += can.volume;
   }
   return totalVolume;
