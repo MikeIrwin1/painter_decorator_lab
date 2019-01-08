@@ -1,8 +1,8 @@
 const assert = require('assert');
-const Room = require('../room');
+const Room = require('../room.js');
 
-describe('Room', function () {
-  let room;
+describe('room', function () {
+  // let room;
 
   it('it should have an area', function () {
     const room1 = new Room(20);
