@@ -48,4 +48,12 @@ describe('Decorator', function () {
     const actual = decorator1.canPaint(room2);
     assert.strictEqual(actual, false);
   });
+
+  it('should be able to paint a room if enough paint in stock', function () {
+    decorator1.addCan(paintCan1);
+    decorator1.addCan(paintCan2);
+    decorator1.paintRoom(room1);
+    const actual = room1.painted;
+    assert.strictEqual(actual, true);
+  });
 });

@@ -22,4 +22,13 @@ Decorator.prototype.canPaint = function (room) {
     return false;
   }
 };
+
+Decorator.prototype.paintRoom = function (room) {
+  if (this.canPaint(room) === true) {
+    room.paint();
+  }
+  else {
+    console.log('You don\'t have enough paint!');
+  }
+};
 module.exports = Decorator;
