@@ -18,4 +18,10 @@ describe('PaintCan', function () {
     const actual = paintCan1.isEmpty();
     assert.strictEqual(actual, false);
   });
+
+  it('be able to remove paint', function () {
+    paintCan1.removePaint(3);
+    const actual = paintCan1.volume;
+    assert.strictEqual(actual, 17);
+  });
 });

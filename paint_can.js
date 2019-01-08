@@ -10,4 +10,9 @@ PaintCan.prototype.isEmpty = function () {
     return false;
   };
 };
+
+PaintCan.prototype.removePaint = function (amount) {
+  this.volume -= amount;
+};
+
 module.exports = PaintCan;
