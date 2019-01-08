@@ -9,6 +9,7 @@ describe('Decorator', function () {
   beforeEach(function () {
     decorator1 = new Decorator();
     paintCan1 = new PaintCan(20);
+    paintCan2 = new PaintCan(10);
   });
 
 
@@ -22,4 +23,11 @@ describe('Decorator', function () {
     const actual = decorator1.paintStock.length;
     assert.strictEqual(actual, 1);
   })
+
+  it('should be able to calculate total volume of paint', function () {
+    decorator1.addCan(paintCan1);
+    decorator1.addCan(paintCan2);
+    const actual = decorator1.totalVolume();
+    assert.strictEqual(actual, 30);
+  });
 });
