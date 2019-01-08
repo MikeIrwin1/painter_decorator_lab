@@ -10,4 +10,9 @@ describe('room', function () {
     assert.strictEqual(actual, 20);
   });
 
+  it('it should start unpainted', function() {
+    const room1 = new Room(20);
+    const actual = room1.painted;
+    assert.strictEqual(actual, false);
+  });
 });
