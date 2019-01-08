@@ -13,4 +13,13 @@ Decorator.prototype.totalVolume = function () {
   }
   return totalVolume;
 };
+
+Decorator.prototype.canPaint = function (room) {
+  if (this.totalVolume() >= room.area){
+    return true;
+  }
+  else {
+    return false;
+  }
+};
 module.exports = Decorator;
